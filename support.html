@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Support — Franko's Rainfall Recorder</title>
+<style>
+  :root { --ink:#0f2233; --muted:#5b7285; --line:#dce6ef; --accent:#b3141a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 40px 20px 80px;
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink); background: #fff;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.5px; }
+  .sub { color: var(--muted); margin: 0 0 36px; font-size: 15px; }
+  h2 { font-size: 19px; margin: 34px 0 8px; }
+  p, li { color: #24394c; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  .contact {
+    border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px;
+    margin: 0 0 30px; background: #f7fafc;
+  }
+  .contact strong { display: block; margin-bottom: 4px; }
+  code { background:#f1f5f9; padding:2px 6px; border-radius:4px; font-size:15px; }
+  footer { margin-top: 46px; padding-top: 18px; border-top: 1px solid var(--line);
+           color: var(--muted); font-size: 14px; }
+  a { color: #1d7fd4; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Support</h1>
+  <p class="sub">Franko's Rainfall Recorder</p>
+
+  <div class="contact">
+    <strong>Get in touch</strong>
+    <a href="mailto:fajfinlayson@gmail.com">fajfinlayson@gmail.com</a><br>
+    Questions, problems and suggestions all welcome. Replies usually within a few days.
+  </div>
+
+  <h2>Recording rainfall</h2>
+  <p>
+    Tap any date on the calendar and enter the millimetres your gauge caught.
+    Tap <em>Today's reading</em> at the top for today without hunting for the date.
+  </p>
+  <p>
+    <strong>A dry day is worth recording.</strong> Entering <code>0mm</code> means
+    you checked the gauge and it was empty — which is different from not having
+    checked. It counts as a recorded day but not as a rain day.
+  </p>
+
+  <h2>Several rain gauges</h2>
+  <p>
+    Open <strong>Settings</strong> (the gear, top right) and add a gauge under
+    <em>Rain gauges</em>. Once you have more than one, use the
+    <strong>Rain gauge</strong> button on the main screen to choose which one the
+    figures describe, and which one a new reading goes to.
+  </p>
+  <p>
+    An <em>Every gauge</em> panel appears, comparing them over a day, week, month
+    or year. Gauges are <strong>averaged, not added</strong> — they are all
+    catching the same weather from different spots, so adding them would report
+    several times the rain that actually fell.
+  </p>
+
+  <h2>Several properties</h2>
+  <p>
+    Add them under <em>Properties</em> in Settings. Each property keeps its own
+    gauges and its own records, and one property's rain never counts toward
+    another's totals.
+  </p>
+
+  <h2>Bringing in old records</h2>
+  <p>
+    Settings &rarr; <strong>Import from CSV</strong>. A spreadsheet with one row
+    per day works, in any of these shapes:
+  </p>
+  <ul>
+    <li><code>date,millimetres</code></li>
+    <li><code>date,gauge,millimetres</code></li>
+    <li><code>date,property,gauge,millimetres</code></li>
+  </ul>
+  <p>
+    Dates can be written <code>22/02/2026</code>, <code>22-2-26</code> or
+    <code>2026-02-22</code>. Where day-and-month order is ambiguous the app works
+    it out from the whole file and <strong>tells you which way it read them</strong>
+    before anything is saved. Check that line — it is there so a misread gets
+    caught before it becomes your record.
+  </p>
+
+  <h2>Backing up</h2>
+  <p>
+    Settings &rarr; <strong>Export to CSV</strong> writes every reading and opens
+    the share sheet, so you can email it to yourself or save it to a cloud drive.
+    Import reads the same file back, which is also how you move your records to a
+    new phone.
+  </p>
+  <p>
+    Your records live only on your device. Deleting the app deletes them, so keep
+    an export somewhere if they matter to you.
+  </p>
+
+  <h2>How the averages are worked out</h2>
+  <ul>
+    <li>
+      <strong>The current year is left out of the annual average.</strong> It is
+      not finished, so counting it would drag the figure down. It is shown
+      separately, marked <em>in progress</em>.
+    </li>
+    <li>
+      <strong>A month only counts in years that recorded it.</strong> A year with
+      no February entries means "not recorded", not "no rain in February", and
+      counting it as zero would understate the average.
+    </li>
+  </ul>
+
+  <h2>Privacy</h2>
+  <p>
+    Nothing is collected and nothing leaves your device.
+    <a href="privacy-policy.html">Read the privacy policy</a>.
+  </p>
+
+  <footer>
+    Franko's Rainfall Recorder &middot; &copy; 2026 Frank Finlayson
+  </footer>
+</main>
+</body>
+</html>
